@@ -7,6 +7,9 @@
 // document.querySelector('.guess').value=24
 // console.log(document.querySelector('.guess').value=24);
 
+const secretNumber = Math.trunc(Math.random() *20)+1;
+document.querySelector('.number').textContent = secretNumber
+
 
 document.querySelector('.check').addEventListener(
     
@@ -17,6 +20,8 @@ document.querySelector('.check').addEventListener(
         if(!guess){
          document.querySelector('.message').textContent = 'No Answer'
         }
+        
+        
        
         
     })
