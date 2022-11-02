@@ -10,6 +10,10 @@ const displayMessage  = function (message){
     document.querySelector('.message').textContent = message
 }
 
+const displayNumber = function(number){
+    document.querySelector('.number').textContent = number
+}
+
 
 document.querySelector('.check').addEventListener(
     
@@ -24,7 +28,7 @@ document.querySelector('.check').addEventListener(
         
         //when player wins
         else if(guess === secretNumber){
-            document.querySelector('.number').textContent = secretNumber
+            displayNumber( secretNumber)
             displayMessage('correct Answer') ;
 
             document.querySelector('body').style.backgroundColor = '#60b347';
@@ -60,7 +64,7 @@ document.querySelector('.check').addEventListener(
           secretNumber = Math.trunc(Math.random() *20)+1;
        displayMessage( 'Start Guessing ..');
           document.querySelector('.score').textContent = score;
-          document.querySelector('.number').textContent ='?';
+          displayNumber('?') 
           document.querySelector('.guess').value=''
           document.querySelector('body').style.backgroundColor = '#222';
           document.querySelector('.number').style.width = '15rem'
